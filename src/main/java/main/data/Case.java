@@ -6,6 +6,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.lang.Nullable;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -19,18 +20,18 @@ public class Case {
     private Case incase;
 
     @Nullable
-    private List<Thing> thing;
+    private Set<Thing> thing;
 
     public Case(String name) {
         this.name = name;
     }
 
-    public Case(String name, List<Thing> thing) {
+    public Case(String name, Set<Thing> thing) {
         this.name = name;
         this.thing = thing;
     }
 
-    public Case(String name, @Nullable Case incase, @Nullable List<Thing> thing) {
+    public Case(String name, @Nullable Case incase, @Nullable Set<Thing> thing) {
         this.name = name;
         this.incase = incase;
         this.thing = thing;
