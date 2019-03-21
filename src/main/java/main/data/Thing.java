@@ -2,14 +2,10 @@ package main.data;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import main.repos.CaseRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
 import org.springframework.lang.Nullable;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Data

@@ -25,9 +25,9 @@ public class SearhController {
 
     @GetMapping("/")
     public String greeting(Model model) {
-        System.out.println("complete 0");
+        //System.out.println("complete 0");
 
-
+/*
         Case case4 = new Case("Case4");
         caseRepo.save(case4);
         Case case3 = new Case("Case3",case4,null);
@@ -47,14 +47,13 @@ public class SearhController {
         for(Iterator<Case> i = s.iterator(); i.hasNext();){
             System.out.println(i.next());
         }
-
+*/
         return "main";
     }
 
-    @PostMapping
+    @PostMapping("/")
     public String find(@RequestParam String type, @RequestParam @Nullable String act, @RequestParam String wind, Map<String,Object> model) {
         // System.out.println("Type - " + type + " Act - " + act + " Wind - " + wind);
-
         Set<Thing> things;
         Set<Case> cases;
 
@@ -64,20 +63,11 @@ public class SearhController {
             for (Iterator<Thing> nt = things.iterator(); nt.hasNext(); ) {
                 Thing t = nt.next();
                 System.out.println(t);
-
             }
             model.put("things",things);
-            return "output";
+            return "main_output_things";
         }
-        if (type.equals("Case")) {
-            cases = caseRepo.findByName(wind);
 
-            for (Iterator<Case> nt = cases.iterator(); nt.hasNext(); ) {
-                Case t = nt.next();
-                System.out.println(t);
-
-            }
-        }
         return "main";
 
     }
