@@ -7,6 +7,7 @@ import org.springframework.lang.Nullable;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Data
 @NoArgsConstructor
@@ -53,24 +54,23 @@ public class Thing {
     }*/
 
    public Set<Case> findFullPath(){ //Метод получения дерева всех коробок, в которой лежит штука
-       Set<Case> listofcases = new HashSet<>();
-       System.out.println("    find all path 0");
-       System.out.println("    " + this);
+       Set<Case> listofcases = new TreeSet<>();
+
        if(incase != null)
        {
-           System.out.println("    find all path 1");
+           //System.out.println("    find all path 1");
            listofcases.add(incase);
-           System.out.println("    find all path 2");
+           //System.out.println("    find all path 2");
            recursiveFinder(listofcases,incase);
-           System.out.println("    find all path 3");
+           //System.out.println("    find all path 3");
        }
        return listofcases;
    }
 
    private void recursiveFinder(Set<Case> listofcases, Case case_){ //Рекурсивный обход дерева из коробок
         if(case_.getIncase() != null){
-            System.out.println("        рекурсия пошла 0");
-            System.out.println("        " + case_.getIncase());
+            //System.out.println("        рекурсия пошла 0");
+            //System.out.println("        " + case_.getIncase());
             listofcases.add(case_.getIncase());
             recursiveFinder(listofcases,case_.getIncase());
         }

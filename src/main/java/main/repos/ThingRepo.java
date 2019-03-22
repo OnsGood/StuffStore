@@ -8,6 +8,6 @@ import java.util.List;
 import java.util.Set;
 
 public interface ThingRepo extends MongoRepository<Thing, String> {
-    public Set<Thing> findByIncase(Case incase);
-    public Set<Thing> findByName(String name);
+    public List<Thing> findByIncase(Case incase);
+    public List<Thing> findByName(String name);
 }

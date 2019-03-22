@@ -10,8 +10,11 @@
 </div>
 {{#things}}
     <div>
-        <b>{{name}}</b>
-        <span>{{count}}</span>
+        <form action="path" method="post">
+            <b>{{name}}</b>
+            <span>{{count}}</span>
+            <input type="submit" value="Перейти" class="link" />
+        </form>
     </div>
 {{/things}}
 </body>
