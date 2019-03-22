@@ -1,5 +1,6 @@
 package main.controllers;
 
+import main.data.Case;
 import main.data.Thing;
 import main.repos.CaseRepo;
 import main.repos.ThingRepo;
@@ -16,12 +17,19 @@ import java.util.Map;
 public class AddController {
     @Autowired
     ThingRepo thingRepo;
+    @Autowired
+    CaseRepo caseRepo;
 
     @PostMapping("/addthing")
     public String addThing(@RequestParam String name, @RequestParam String count, Map<String, Object> model){
         Thing a = new Thing(name,count);
-        System.out.println("start adding");
         thingRepo.save(a);
         return "addthing";
+    }
+    @PostMapping("/addcase")
+    public String addCase(@RequestParam String name){
+        Case case_ = new Case(name);
+        caseRepo.save(case_);
+        return "addcase";
     }
 }

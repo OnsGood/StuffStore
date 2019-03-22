@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 public interface CaseRepo extends MongoRepository<Case,String> {
-    public Set<Case> findByIncase(Case incase); //коробки которые лежат этой коробке
-    public Set<Case> findByThing(Thing thing); //Не понял как искать коробку, по вещи которая лежит в ней.
-    public Set<Case> findByName(String name);
+    public List<Case> findByIncase(Case incase); //коробки которые лежат этой коробке
+    public List<Case> findByThing(Thing thing); //Не понял как искать коробку, по вещи которая лежит в ней, этим занимается метод в контроллере.
+    public List<Case> findByName(String name);
 }
