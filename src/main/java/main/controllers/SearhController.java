@@ -34,9 +34,12 @@ public class SearhController {
         return "full_path_to_thing";
     }
 
-    @PostMapping("/")
-    public String find(@RequestParam String type, @RequestParam @Nullable String act, @RequestParam String wind, Map<String,Object> model) {
-        // System.out.println("Type - " + type + " Act - " + act + " Wind - " + wind);
+    @PostMapping("/")//Че это она такая раздутая
+    public String find(
+            @RequestParam String type,
+            @RequestParam @Nullable String act,
+            @RequestParam String wind,
+            Map<String,Object> model) {
         List<Thing> things;
         List<Case> cases;
 
