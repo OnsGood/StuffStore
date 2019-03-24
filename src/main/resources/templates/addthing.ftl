@@ -1,10 +1,6 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Stuff store</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
+<#import "parts/common.ftl" as e>
+
+<@e.page>
 <div>
     <form action="/addthing" method="post">
         <div><label> Name : <input type="text" name="name"/> </label></div>
@@ -13,6 +9,4 @@
     </form>
     <a href="/">Back to main page</a>
 </div>
-
-</body>
-</html>
+</@e.page>

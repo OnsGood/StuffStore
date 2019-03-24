@@ -1,21 +1,19 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Stuff store</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
+<#import "parts/common.ftl" as e>
+
+<@e.page>
 <div align="center">
     <h2>STUFF LIST</h2><br>
 </div>
-{{#cases}}
+<#list cases as case>
     <div>
         <form action="path" method="post">
-            <b>{{name}}</b>
+            <b>${case.name}</b>
             <input type="submit" value="Перейти" class="link" />
         </form>
     </div>
-{{/cases}}
+<#else>
+No cases available
+</#list>
+
 <a href="/">Back to main page</a>
-</body>
-</html>
+</@e.page>

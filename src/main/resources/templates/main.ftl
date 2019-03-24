@@ -1,11 +1,6 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Stuff store</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
+<#import "parts/common.ftl" as e>
 
+<@e.page>
 <div align="center">
     <form method="post">
         <h2>STUFF STORE</h2><br>
@@ -31,7 +26,4 @@
         <input type="submit" value="добавить коробки">
     </form>
 </div>
-
-</body>
-
-</html>
+</@e.page>
