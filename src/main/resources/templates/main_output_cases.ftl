@@ -15,5 +15,4 @@
 No cases available
 </#list>
 
-<a href="/">Back to main page</a>
 </@e.page>

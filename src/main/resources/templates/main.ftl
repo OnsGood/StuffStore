@@ -3,27 +3,33 @@
 <@e.page>
 <div align="center">
     <form method="post">
-        <h2>STUFF STORE</h2><br>
+        <h2>STUFF STORE</h2>
+        <div class="container">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="type" class="custom-control-input" value="Thing">
+                <label class="custom-control-label" for="customRadioInline1">Thing</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="type" class="custom-control-input" value="Case">
+                <label class="custom-control-label" for="customRadioInline2">Case</label>
+            </div>
 
-        <input type="radio" name="type" value="Thing" style="display:inline-block;"> Thing<Br>
-        <input type="radio" name="type" value="Case" style="display:inline-block;"> Case<Br>
-        <p>
-            <input type="text" name="wind" size="40" >
-        </p>
-        <input type="submit" value="Искать">
-        <input type="radio" name="act" value="Name" style="display:inline-block;"> Name<Br>
-        <input type="radio" name="act" value="inCase" style="display:inline-block;"> inCase<Br>
+            <div class="input-group">
+                <input name="wind" type="text" class="form-control" placeholder="Let's do it" aria-label="wind" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+                </div>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline3" name="act" class="custom-control-input" value="Name">
+                <label class="custom-control-label" for="customRadioInline3">by Name</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline4" name="act" class="custom-control-input" value="inCase">
+                <label class="custom-control-label" for="customRadioInline4">by Case</label>
+            </div>
+        </div>
     </form>
 </div>
 
-<div>
-    <form action="/addthing">
-        <input type="submit" value="добавить штуки">
-    </form>
-</div>
-<div>
-    <form action="addcase">
-        <input type="submit" value="добавить коробки">
-    </form>
-</div>
 </@e.page>

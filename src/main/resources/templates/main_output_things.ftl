@@ -16,5 +16,4 @@
 No things available
 </#list>
 
-<a href="/">Back to main page</a>
 </@e.page>
